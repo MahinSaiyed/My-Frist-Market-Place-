@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TradeFusion AI Market | SaiyedWebCoders</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="glass-nav">
+      <div class="brand">
+        <span class="logo-dot"></span>
+        <div>
+          <h1>TradeFusion AI Market</h1>
+          <p>By SaiyedWebCoders · Premium Hybrid B2B + B2C SaaS</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#marketplace">Marketplace</a>
+        <a href="#vendor">Vendor Dashboard</a>
+        <a href="#admin">Admin Analytics</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero floating-card">
+        <div>
+          <h2>Scale Retail + Bulk Commerce in One AI-Powered Platform</h2>
+          <p>
+            Launch a multi-vendor marketplace with onboarding, vendor operations,
+            commission split automation (Stripe Connect / Razorpay Route), analytics,
+            product approvals, and hybrid checkout.
+          </p>
+          <div class="chips">
+            <span>Alibaba-style B2B</span>
+            <span>Amazon-style B2C</span>
+            <span>Auto Commission Split</span>
+          </div>
+        </div>
+        <div class="hero-metrics" id="heroMetrics"></div>
+      </section>
+
+      <section id="marketplace" class="panel">
+        <div class="panel-head">
+          <h3>Customer Marketplace</h3>
+          <div class="filters">
+            <input id="searchInput" placeholder="Search products..." />
+            <select id="categoryFilter"></select>
+          </div>
+        </div>
+        <div id="productsGrid" class="product-grid"></div>
+      </section>
+
+      <section class="split">
+        <section id="vendor" class="panel">
+          <h3>Vendor Dashboard</h3>
+          <form id="productForm" class="form-grid">
+            <input name="vendorId" placeholder="Vendor ID (e.g. ven-1)" required />
+            <input name="name" placeholder="Product name" required />
+            <input name="category" placeholder="Category" required />
+            <input name="retailPrice" type="number" placeholder="Retail price" required />
+            <input name="moq" type="number" placeholder="MOQ" required />
+            <input name="inventory" type="number" placeholder="Inventory" required />
+            <input name="description" placeholder="Description" required class="wide" />
+            <button type="submit">Upload Product for Approval</button>
+          </form>
+          <pre id="vendorResult"></pre>
+        </section>
+
+        <section id="admin" class="panel">
+          <h3>Admin Dashboard</h3>
+          <form id="commissionForm" class="form-grid">
+            <input name="commissionRate" type="number" step="0.01" min="0" max="1" value="0.1" required />
+            <select name="splitProvider">
+              <option>Stripe Connect</option>
+              <option>Razorpay Route</option>
+            </select>
+            <button type="submit">Update Commission</button>
+          </form>
+          <div id="chart" class="chart"></div>
+          <pre id="adminResult"></pre>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

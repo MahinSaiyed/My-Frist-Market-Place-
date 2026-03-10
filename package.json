@@ -1,0 +1,19 @@
+{
+  "name": "tradefusion-ai-market",
+  "version": "1.0.0",
+  "description": "Premium full-stack hybrid multi-vendor marketplace platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "marketplace",
+    "b2b",
+    "b2c",
+    "multi-vendor"
+  ],
+  "author": "SaiyedWebCoders",
+  "license": "MIT"
+}
